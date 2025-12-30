@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX科技有限公司 - 首页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        /* 英雄区（Banner） */
+        .hero {
+            background-color: #f5f7fa;
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* 公司简介模块 */
+        .about {
+            padding: 60px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap; /* 适配手机端自动换行 */
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 核心业务模块 */
+        .services {
+            background-color: #f5f7fa;
+            padding: 60px 50px;
+        }
+
+        .services h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .service-cards {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 280px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 联系方式模块 */
+        .contact {
+            padding: 60px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: #666;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        /* 响应式适配（手机端） */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .hero, .about, .services, .contact {
+                padding: 40px 20px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .about h2, .services h2, .contact h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">XX科技有限公司</div>
+        <ul>
+            <li><a href="#about">公司简介</a></li>
+            <li><a href="#services">核心业务</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 英雄区（Banner） -->
+    <div class="hero">
+        <h1>专注于XX领域，打造高品质解决方案</h1>
+        <p>XX科技有限公司成立于20XX年，始终秉持“客户第一、创新驱动”的理念，为各行业客户提供专业的产品与服务，助力企业数字化转型。</p>
+    </div>
+
+    <!-- 公司简介 -->
+    <div class="about" id="about">
+        <h2>关于我们</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>XX科技有限公司是一家专注于XX、XX、XX领域的高新技术企业，总部位于XX市。公司拥有一支由资深工程师、产品专家组成的专业团队，具备丰富的行业经验和技术积累。</p>
+                <p>自成立以来，我们已为超过100家企业提供了定制化解决方案，客户涵盖金融、教育、制造等多个行业，凭借优质的产品和完善的服务赢得了客户的一致认可。</p>
+                <p>我们的使命：用技术创造价值，用服务成就客户；我们的愿景：成为行业内领先的解决方案提供商。</p>
+            </div>
+            <div class="about-img">
+                <!-- 替换为你的公司图片（本地图片或免费图床链接） -->
+                <img src="https://picsum.photos/600/400" alt="公司办公环境">
+            </div>
+        </div>
+    </div>
+
+    <!-- 核心业务 -->
+    <div class="services" id="services">
+        <h2>核心业务</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>产品定制开发</h3>
+                <p>根据客户的实际需求，量身定制各类软件产品、小程序、APP等，满足个性化业务场景。</p>
+            </div>
+            <div class="card">
+                <h3>技术咨询服务</h3>
+                <p>提供专业的技术架构设计、流程优化、数字化转型咨询，助力企业提升技术效率。</p>
+            </div>
+            <div class="card">
+                <h3>运维与售后支持</h3>
+                <p>7×24小时技术支持，定期系统维护、升级，保障客户系统稳定运行。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="contact" id="contact">
+        <h2>联系我们</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>公司地址</h3>
+                <p>XX省XX市XX区XX路XX号XX大厦XX室</p>
+            </div>
+            <div class="contact-item">
+                <h3>联系电话</h3>
+                <p>010-12345678</p>
+            </div>
+            <div class="contact-item">
+                <h3>电子邮箱</h3>
+                <p>contact@xxtech.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2025 XX科技有限公司 版权所有</p>
+    </footer>
+</body>
+</html>
